@@ -1,0 +1,894 @@
+<!doctype html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg"
+    data-sidebar-image="none" data-preloader="disable" data-theme="default" data-theme-colors="default">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Mexico</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin &amp; Dashboard Template" name="description">
+    <meta content="Themesbrand" name="author">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- Layout config Js -->
+    <script src="assets/js/layout.js"></script>
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css">
+    <!-- custom Css-->
+    <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css">
+
+    <script type='text/javascript'
+        src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+    <style>
+        .btn-group button i{
+            font-size: 16px;
+            font-weight: 600;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar-example">
+
+    <!-- Begin page -->
+    <div class="layout-wrapper landing">
+        <!-- Start navbar -->
+        <nav class="navbar navbar-expand-lg navbar-landing fixed-top job-navbar" id="navbar">
+            <div class="container-fluid custom-container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="./assets/images/image/logo.png" class="card-logo card-logo-dark" alt="logo dark"
+                        height="28">
+                    <img src="./assets/images/image/logo.png" class="card-logo card-logo-light" alt="logo light"
+                        height="28">
+                </a>
+                <button class="navbar-toggler py-0 fs-20 text-body" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="mdi mdi-menu"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mt-2 mt-lg-0" id="navbar-example">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#hero">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#process">Process</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#categories">Categories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#findJob">Find Jobs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#candidates">Candidates</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#blog">Blog</a>
+                        </li>
+                    </ul>
+
+                    <div class="">
+                        <a href="auth-signin-basic.html" class="btn btn-success rounded-5 "><i
+                                class="ri-user-3-line align-bottom me-1"></i> Login & Register</a>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+        <!-- end navbar -->
+        <!--  -->
+        <section class="container g-5" style="padding: 80px 0 0 0;">
+            <div class="row d-flex align-items-center mb-5 ms-5">
+                <div class="col-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+                    <form action="#" class="job-panel-filter">
+                        <div class="row g-md-0 g-2  bg-light rounded-4">
+                            <div class="col-md-4 py-3" >
+                                <div>
+                                    <!-- <span class="m-0 p-0 ms-auto" >Select</span> -->
+                                    <select class="form-control" data-choices="">
+                                        <option value="">Select job type</option>
+                                        <option value="Full Time">Full Time</option>
+                                        <option value="Part Time">Part Time</option>
+                                        <option value="Freelance">Freelance</option>
+                                        <option value="Internship">Internship</option>
+                                    </select>
+                                </div>
+    
+                            </div>
+                            <!--end col-->
+                            <div class="col-md-4 py-3">
+                                <div>
+                                    <input type="search" id="job-title" class="form-control filter-input-box" placeholder="Job, Company name...">
+                                </div>
+                            </div>
+                            <!--end col-->
+                            <div class="col-md-4 px-2">
+                                <div class="h-100 " style="float: right; width: 80px;">
+                                    <button class="btn rounded-4 btn-primary submit-btn w-100 h-70 mt-3" type="submit"> 
+                                        <img src="./assets/images/image/search-normal.svg" alt="" srcset="">
+                                    </button>
+                                </div>
+                            </div>
+                            <!--end col-->
+                        </div>
+                        <!--end row-->
+                    </form>
+                </div>
+                <div class="col-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+                    <div class="d-flex justify-content-center" style="gap:20px;">
+                        <div class="btn-group ">
+                            <button class="btn btn-light dropdown-toggle rounded-5" type="button" id="dropdownMenuClickableOutside" data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false">
+                                <i class="ri-money-dollar-circle-fill"></i>
+                                Price
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableOutside">
+                                <li><a class="dropdown-item" href="javascript:void(0);">Menu item</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0);">Menu item</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0);">Menu item</a></li>
+                            </ul>
+                        </div>
+                        <div class="btn-group ">
+                            <button class="btn btn-light dropdown-toggle rounded-5" type="button" id="dropdownMenuClickableOutside" data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false">
+                                <i class="ri-hotel-bed-fill"></i>
+                                Bed
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableOutside">
+                                <li><a class="dropdown-item" href="javascript:void(0);">Menu item</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0);">Menu item</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0);">Menu item</a></li>
+                            </ul>
+                        </div>
+                        <div class="btn-group ">
+                            <button class="btn btn-light dropdown-toggle rounded-5" type="button" id="dropdownMenuClickableOutside" data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false">
+                                <i class="ri-home-3-line"></i>
+                                Home
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableOutside">
+                                <li><a class="dropdown-item" href="javascript:void(0);">Menu item</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0);">Menu item</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0);">Menu item</a></li>
+                            </ul>
+                        </div>
+                        <div class="btn-group ">
+                            <button class="btn btn-light dropdown-toggle rounded-5" type="button" id="dropdownMenuClickableOutside" data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false">
+                                <i class="las la-sliders-h"></i>
+                                Price
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableOutside">
+                                <li><a class="dropdown-item" href="javascript:void(0);">Menu item</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0);">Menu item</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0);">Menu item</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--  -->
+        <!--  -->
+        <section class="container">
+            <div class="page-title-right my-4">
+                <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
+                    <li class="breadcrumb-item"><a href="javascript: void(0);">Canada</a></li>
+                    <li class="breadcrumb-item active">DownTown</li>
+                </ol>
+            </div>
+        
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="d-flex align-items-center mb-5">
+                            <h2 class="mb-0 fs-1 lh-base flex-grow-1 fw-bold ">Top listings for you</h2>
+                            <button type="button" class="btn rounded-pill btn-outline-dark waves-effect waves-light material-shadow-none">See
+                                More</button>
+                        </div>
+                    </div>
+                </div><!-- end row -->
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card explore-box card-animate">
+                            <div class="position-relative card-body">
+                                <div class="position-absolute z-1 top-5 start-7 py-1 px-3 bg-danger rounded-5 text-white">
+                                    Feature</div>
+                                <div class="explore-place-bid-img overflow-hidden rounded">
+                                    <img src="assets/images/image/top_lis_1.jpg" alt="" class="z-0 explore-img w-100 rounded-4">
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="fw-semibold mb-2">Title of the Listing will come here...</h2>
+                                    <span class="d-flex text-align-center">
+                                        <img src="./assets/images/image/location.png" class="" alt="">
+                                        <p class="card-text mb-0">Pluto Street, Indonesia</p>
+                                    </span>
+
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <div class="area">
+                                            <span class="d-flex align-items-center">
+                                                <img src="./assets/images/image/Vector.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <p class="fs-10 m-0">800 Sq Ft</p>
+                                            </span>
+                                        </div>
+                                        <div class="bed">
+                                            <span class="d-flex align-items-center">
+                                                <img src="./assets/images/image/local_hotel.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <p class="fs-10 m-0">1 Bedroom</p>
+                                            </span>
+                                        </div>
+                                        <div class="bath">
+                                            <span class="d-flex align-items-center">
+                                                <img src="./assets/images/image/Group.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <p class="fs-10 m-0">2 Bathroom</p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="d-flex mb-4 align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <img src="assets/images/users/avatar-5.jpg" alt="" class="avatar-sm rounded-circle">
+                                    </div>
+                                    <div class="flex-grow-1 ms-2">
+                                        <h5 class="card-title mb-1">Shoo Phar Dhie</h5>
+                                        <p class="text-muted mb-0">Kang Bakso</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="card-footer py-1">
+                                    <h2 class="fw-bold fs-2">$581,339.00 <span class="text-success">USD</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card explore-box card-animate">
+                            <div class="position-relative card-body">
+                                <div class="position-absolute z-1 top-5 start-7 py-1 px-3 bg-danger rounded-5 text-white">
+                                    Feature</div>
+                                <div class="explore-place-bid-img overflow-hidden rounded">
+                                    <img src="assets/images/image/top_lis_2.jpg" alt="" class="z-0 explore-img w-100 rounded-4">
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="fw-semibold mb-2">Title of the Listing will come here...</h2>
+                                    <span class="d-flex text-align-center">
+                                        <img src="./assets/images/image/location.png" class="" alt="">
+                                        <p class="card-text mb-0">Pluto Street, Indonesia</p>
+                                    </span>
+
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <div class="area">
+                                            <span class="d-flex align-items-center">
+                                                <img src="./assets/images/image/Vector.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <p class="fs-10 m-0">800 Sq Ft</p>
+                                            </span>
+                                        </div>
+                                        <div class="bed">
+                                            <span class="d-flex align-items-center">
+                                                <img src="./assets/images/image/local_hotel.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <p class="fs-10 m-0">1 Bedroom</p>
+                                            </span>
+                                        </div>
+                                        <div class="bath">
+                                            <span class="d-flex align-items-center">
+                                                <img src="./assets/images/image/Group.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <p class="fs-10 m-0">2 Bathroom</p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="d-flex mb-4 align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <img src="assets/images/users/avatar-5.jpg" alt="" class="avatar-sm rounded-circle">
+                                    </div>
+                                    <div class="flex-grow-1 ms-2">
+                                        <h5 class="card-title mb-1">Shoo Phar Dhie</h5>
+                                        <p class="text-muted mb-0">Kang Bakso</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="card-footer py-1">
+                                    <h2 class="fw-bold fs-2">$581,339.00 <span class="text-success">USD</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card explore-box card-animate">
+                            <div class="position-relative card-body">
+                                <div class="position-absolute z-1 top-5 start-7 py-1 px-3 bg-danger rounded-5 text-white">
+                                    Feature</div>
+                                <div class="explore-place-bid-img overflow-hidden rounded">
+                                    <img src="assets/images/image/top_lis_3.jpg" alt="" class="z-0 explore-img w-100 rounded-4">
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="fw-semibold mb-2">Title of the Listing will come here...</h2>
+                                    <span class="d-flex text-align-center">
+                                        <img src="./assets/images/image/location.png" class="" alt="">
+                                        <p class="card-text mb-0">Pluto Street, Indonesia</p>
+                                    </span>
+
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <div class="area">
+                                            <span class="d-flex align-items-center">
+                                                <img src="./assets/images/image/Vector.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <p class="fs-10 m-0">800 Sq Ft</p>
+                                            </span>
+                                        </div>
+                                        <div class="bed">
+                                            <span class="d-flex align-items-center">
+                                                <img src="./assets/images/image/local_hotel.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <p class="fs-10 m-0">1 Bedroom</p>
+                                            </span>
+                                        </div>
+                                        <div class="bath">
+                                            <span class="d-flex align-items-center">
+                                                <img src="./assets/images/image/Group.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <p class="fs-10 m-0">2 Bathroom</p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="d-flex mb-4 align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <img src="assets/images/users/avatar-5.jpg" alt="" class="avatar-sm rounded-circle">
+                                    </div>
+                                    <div class="flex-grow-1 ms-2">
+                                        <h5 class="card-title mb-1">Shoo Phar Dhie</h5>
+                                        <p class="text-muted mb-0">Kang Bakso</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="card-footer py-1">
+                                    <h2 class="fw-bold fs-2">$581,339.00 <span class="text-success">USD</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end col-->
+                </div><!--end row-->
+                <div class="row mt-5">
+                    <div class="col-lg-4">
+                        <div class="card explore-box card-animate">
+                            <div class="position-relative card-body">
+                                <div class="position-absolute z-1 top-5 start-7 py-1 px-3 bg-danger rounded-5 text-white">
+                                    Feature</div>
+                                <div class="explore-place-bid-img overflow-hidden rounded">
+                                    <img src="assets/images/image/top_lis_1.jpg" alt="" class="z-0 explore-img w-100 rounded-4">
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="fw-semibold mb-2">Title of the Listing will come here...</h2>
+                                    <span class="d-flex text-align-center">
+                                        <img src="./assets/images/image/location.png" class="" alt="">
+                                        <p class="card-text mb-0">Pluto Street, Indonesia</p>
+                                    </span>
+
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <div class="area">
+                                            <span class="d-flex align-items-center">
+                                                <img src="./assets/images/image/Vector.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <p class="fs-10 m-0">800 Sq Ft</p>
+                                            </span>
+                                        </div>
+                                        <div class="bed">
+                                            <span class="d-flex align-items-center">
+                                                <img src="./assets/images/image/local_hotel.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <p class="fs-10 m-0">1 Bedroom</p>
+                                            </span>
+                                        </div>
+                                        <div class="bath">
+                                            <span class="d-flex align-items-center">
+                                                <img src="./assets/images/image/Group.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <p class="fs-10 m-0">2 Bathroom</p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="d-flex mb-4 align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <img src="assets/images/users/avatar-5.jpg" alt="" class="avatar-sm rounded-circle">
+                                    </div>
+                                    <div class="flex-grow-1 ms-2">
+                                        <h5 class="card-title mb-1">Shoo Phar Dhie</h5>
+                                        <p class="text-muted mb-0">Kang Bakso</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="card-footer py-1">
+                                    <h2 class="fw-bold fs-2">$581,339.00 <span class="text-success">USD</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card explore-box card-animate">
+                            <div class="position-relative card-body">
+                                <div class="position-absolute z-1 top-5 start-7 py-1 px-3 bg-danger rounded-5 text-white">
+                                    Feature</div>
+                                <div class="explore-place-bid-img overflow-hidden rounded">
+                                    <img src="assets/images/image/top_lis_2.jpg" alt="" class="z-0 explore-img w-100 rounded-4">
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="fw-semibold mb-2">Title of the Listing will come here...</h2>
+                                    <span class="d-flex text-align-center">
+                                        <img src="./assets/images/image/location.png" class="" alt="">
+                                        <p class="card-text mb-0">Pluto Street, Indonesia</p>
+                                    </span>
+
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <div class="area">
+                                            <span class="d-flex align-items-center">
+                                                <img src="./assets/images/image/Vector.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <p class="fs-10 m-0">800 Sq Ft</p>
+                                            </span>
+                                        </div>
+                                        <div class="bed">
+                                            <span class="d-flex align-items-center">
+                                                <img src="./assets/images/image/local_hotel.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <p class="fs-10 m-0">1 Bedroom</p>
+                                            </span>
+                                        </div>
+                                        <div class="bath">
+                                            <span class="d-flex align-items-center">
+                                                <img src="./assets/images/image/Group.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <p class="fs-10 m-0">2 Bathroom</p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="d-flex mb-4 align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <img src="assets/images/users/avatar-5.jpg" alt="" class="avatar-sm rounded-circle">
+                                    </div>
+                                    <div class="flex-grow-1 ms-2">
+                                        <h5 class="card-title mb-1">Shoo Phar Dhie</h5>
+                                        <p class="text-muted mb-0">Kang Bakso</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="card-footer py-1">
+                                    <h2 class="fw-bold fs-2">$581,339.00 <span class="text-success">USD</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card explore-box card-animate">
+                            <div class="position-relative card-body">
+                                <div class="position-absolute z-1 top-5 start-7 py-1 px-3 bg-danger rounded-5 text-white">
+                                    Feature</div>
+                                <div class="explore-place-bid-img overflow-hidden rounded">
+                                    <img src="assets/images/image/top_lis_3.jpg" alt="" class="z-0 explore-img w-100 rounded-4">
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="fw-semibold mb-2">Title of the Listing will come here...</h2>
+                                    <span class="d-flex text-align-center">
+                                        <img src="./assets/images/image/location.png" class="" alt="">
+                                        <p class="card-text mb-0">Pluto Street, Indonesia</p>
+                                    </span>
+
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <div class="area">
+                                            <span class="d-flex align-items-center">
+                                                <img src="./assets/images/image/Vector.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <p class="fs-10 m-0">800 Sq Ft</p>
+                                            </span>
+                                        </div>
+                                        <div class="bed">
+                                            <span class="d-flex align-items-center">
+                                                <img src="./assets/images/image/local_hotel.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <p class="fs-10 m-0">1 Bedroom</p>
+                                            </span>
+                                        </div>
+                                        <div class="bath">
+                                            <span class="d-flex align-items-center">
+                                                <img src="./assets/images/image/Group.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <p class="fs-10 m-0">2 Bathroom</p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="d-flex mb-4 align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <img src="assets/images/users/avatar-5.jpg" alt="" class="avatar-sm rounded-circle">
+                                    </div>
+                                    <div class="flex-grow-1 ms-2">
+                                        <h5 class="card-title mb-1">Shoo Phar Dhie</h5>
+                                        <p class="text-muted mb-0">Kang Bakso</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="card-footer py-1">
+                                    <h2 class="fw-bold fs-2">$581,339.00 <span class="text-success">USD</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end col-->
+                </div><!--end row-->
+
+                <div class="d-flex justify-content-center my-4">
+                    <div class="pagination-wrap hstack gap-2">
+                        <a class="page-item pagination-prev disabled" href="javascript:void(0)">
+                            <i class="ri-arrow-left-s-line"></i>
+                        </a>
+                        <ul class="pagination listjs-pagination mb-0">
+                            <li class="active">
+                                <a class="page" href="#" data-i="1" data-page="3">1</a>
+                            </li>
+                            <li>
+                                <a class="page" href="#" data-i="2" data-page="3">2</a>
+                            </li>
+                            <li>
+                                <a class="page" href="#" data-i="3" data-page="3">2</a>
+                            </li>
+                            <li>
+                                <a class="page" href="#" data-i="4" data-page="3">2</a>
+                            </li>
+                            <li>
+                                <a class="page" href="#" data-i="..." data-page="3">....</a>
+                            </li>
+                        </ul>
+                        <a class="page-item pagination-next" href="javascript:void(0)">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </a>
+                    </div>
+                    <!-- <div class="text-rang">
+                        <p>1 - 9 of 1,714 Results</p>
+                    </div> -->
+                </div>
+            </div>
+                
+        </section>
+        <!--  -->
+
+        <!--  -->
+        <section class="section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="d-flex align-items-center mb-5">
+                            <h2 class="mb-0 fs-1 lh-base flex-grow-1 fw-bold ">Recently viewed listing</h2>
+                          
+                        </div>
+                    </div>
+                </div><!-- end row -->
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card explore-box card-animate">
+                            <div class="position-relative card-body">
+                                <div class="position-absolute z-1 top-5 start-7 py-1 px-3 bg-danger rounded-5 text-white">
+                                    Feature</div>
+                                <div class="explore-place-bid-img overflow-hidden rounded">
+                                    <img src="assets/images/image/top_lis_1.jpg" alt="" class="z-0 explore-img w-100 rounded-4">
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="fw-semibold mb-2">Title of the Listing will come here...</h2>
+                                    <span class="d-flex text-align-center">
+                                        <img src="./assets/images/image/location.png" class="" alt="">
+                                        <p class="card-text mb-0">Pluto Street, Indonesia</p>
+                                    </span>
+
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <div class="area">
+                                            <span class="d-flex align-items-center">
+                                                <img src="./assets/images/image/Vector.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <p class="fs-10 m-0">800 Sq Ft</p>
+                                            </span>
+                                        </div>
+                                        <div class="bed">
+                                            <span class="d-flex align-items-center">
+                                                <img src="./assets/images/image/local_hotel.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <p class="fs-10 m-0">1 Bedroom</p>
+                                            </span>
+                                        </div>
+                                        <div class="bath">
+                                            <span class="d-flex align-items-center">
+                                                <img src="./assets/images/image/Group.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <p class="fs-10 m-0">2 Bathroom</p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="card-footer py-1">
+                                    <h2 class="fw-bold fs-2">$581,339.00 <span class="text-success">USD</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card explore-box card-animate">
+                            <div class="position-relative card-body">
+                                <div class="position-absolute z-1 top-5 start-7 py-1 px-3 bg-danger rounded-5 text-white">
+                                    Feature</div>
+                                <div class="explore-place-bid-img overflow-hidden rounded">
+                                    <img src="assets/images/image/top_lis_2.jpg" alt="" class="z-0 explore-img w-100 rounded-4">
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="fw-semibold mb-2">Title of the Listing will come here...</h2>
+                                    <span class="d-flex text-align-center">
+                                        <img src="./assets/images/image/location.png" class="" alt="">
+                                        <p class="card-text mb-0">Pluto Street, Indonesia</p>
+                                    </span>
+
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <div class="area">
+                                            <span class="d-flex align-items-center">
+                                                <img src="./assets/images/image/Vector.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <p class="fs-10 m-0">800 Sq Ft</p>
+                                            </span>
+                                        </div>
+                                        <div class="bed">
+                                            <span class="d-flex align-items-center">
+                                                <img src="./assets/images/image/local_hotel.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <p class="fs-10 m-0">1 Bedroom</p>
+                                            </span>
+                                        </div>
+                                        <div class="bath">
+                                            <span class="d-flex align-items-center">
+                                                <img src="./assets/images/image/Group.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <p class="fs-10 m-0">2 Bathroom</p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="card-footer py-1">
+                                    <h2 class="fw-bold fs-2">$581,339.00 <span class="text-success">USD</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card explore-box card-animate">
+                            <div class="position-relative card-body">
+                                <div class="position-absolute z-1 top-5 start-7 py-1 px-3 bg-danger rounded-5 text-white">
+                                    Feature</div>
+                                <div class="explore-place-bid-img overflow-hidden rounded">
+                                    <img src="assets/images/image/top_lis_3.jpg" alt="" class="z-0 explore-img w-100 rounded-4">
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="fw-semibold mb-2">Title of the Listing will come here...</h2>
+                                    <span class="d-flex text-align-center">
+                                        <img src="./assets/images/image/location.png" class="" alt="">
+                                        <p class="card-text mb-0">Pluto Street, Indonesia</p>
+                                    </span>
+
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <div class="area">
+                                            <span class="d-flex align-items-center">
+                                                <img src="./assets/images/image/Vector.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <p class="fs-10 m-0">800 Sq Ft</p>
+                                            </span>
+                                        </div>
+                                        <div class="bed">
+                                            <span class="d-flex align-items-center">
+                                                <img src="./assets/images/image/local_hotel.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <p class="fs-10 m-0">1 Bedroom</p>
+                                            </span>
+                                        </div>
+                                        <div class="bath">
+                                            <span class="d-flex align-items-center">
+                                                <img src="./assets/images/image/Group.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <p class="fs-10 m-0">2 Bathroom</p>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="card-footer py-1">
+                                    <h2 class="fw-bold fs-2">$581,339.00 <span class="text-success">USD</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </section>
+        <!--  -->
+
+        <!--  -->
+        <section class="py-5 bg-success position-relative rounded-5">
+            <div class="bg-overlay bg-overlay-pattern  "></div>
+            <div class="container ">
+                <div class="d-flex flex-column">
+                    <div class="lh-lg">
+                        <div >
+                            <h2 class="text-white fs-1 mb-0 fw-bolder pb-3">Getting around Bay Street Corridor, Torronto, ON</h2>
+                            <p class="text-white">The area around Bay Street Corridor, Toronto, ON is by far a walker’s paradise. With all services and amenities nearby, you really don’t need a car to run your errands. Regarding transit, there are first-class public transportation options you can take advantage of. Bay Street Corridor, Toronto, ON is in a very bikeable community, so you’ll have a developed cycling infrastructure at your disposal. <br>Powered by <span><a href="" style="text-decoration:underline; color: #ffff;">Walk Score®</a></span></p>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                    <div class="row bg-light rounded-4">
+                        <div class="col-4 bg-white rounded-4 m-3 p-3">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <!-- <div class="progress blue" style="border-color: #0E694B; color: #0E694B;">
+                                    <span class="progress-left">
+                                      <span class="progress-bar" style="border-color: #0E694B;" ></span>
+                                    </span>
+                                    <span class="progress-right" >
+                                        <span class="progress-bar" style="border-color: #0E694B;"></span>
+                                    </span>
+                                    <div class="progress-value fw-bolder fs-1" style="color: #0E694B;">90%</div>
+                                </div> -->
+                                
+                                <div class="progers-bar-text lh-lg">
+                                    <h4>This is Progress</h4>
+                                    <p>Text is here</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4"></div>
+                        <div class="col-4"></div>
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </section>
+        <!--  -->
+
+        <!--  -->
+        <section class="container section">
+            <div class="row g-5">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <h1 class="text-success fw-bolder" style="font-size: 2.2rem;">
+                        Nearby Neighborhoods
+                    </h1>
+                    <h2 class="fw-bolder fs-1" style="color: #B8B8B8;">
+                        Nearby Cities
+                    </h2>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
+                    <p>Scarborough Homes for Sale Etobicoke Homes for Sale North York Homes for Sale Forest Hill Homes for Sale East York Homes for Sale Leaside Homes for Sale High Park Homes for Sale Niagara Homes for Sale Leslieville Homes for Sale Rosedale Homes for Sale Don Mills Homes for Sale</p>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
+                    <p>
+                        Highland Creek Homes for Sale Rexdale Homes for Sale The Beach Homes for Sale Mimico Homes for Sale Bathurst Manor Homes for Sale Guildwood Homes for Sale Malvern Homes for Sale Bridle Path Homes for Sale Bloor West Village Homes for Sale Roncesvalles Homes for Sale
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!--  -->
+
+
+        <!-- Start footer -->
+        <footer class="custom-footer bg-success text-white py-5 position-relative">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mt-4">
+                        <div>
+                            <div>
+                                <img src="assets/images/image/light_logo_.png" alt="logo light" height="40" />
+                            </div>
+                            <div class="mt-4 fs-13">
+                                <p style="color: #ffff;">Premium Multipurpose Admin & Dashboard Template</p>
+                                <p style="color: #ffff;">You can build any type of web application like eCommerce, CRM,
+                                    CMS, Project
+                                    management apps, Admin Panels, etc using Velzon.</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7 ms-lg-auto">
+                        <div class="row">
+                            <div class="col-sm-3 mt-4">
+                                <h5 class="text-white mb-0">Company</h5>
+                                <div class="text-muted mt-3">
+                                    <ul class="list-unstyled ff-secondary footer-list">
+                                        <li><a href="pages-profile.html">About Us</a></li>
+                                        <li><a href="pages-gallery.html">Gallery</a></li>
+                                        <li><a href="pages-team.html">Team</a></li>
+                                        <li><a href="pages-pricing.html">Pricing</a></li>
+                                        <li><a href="pages-timeline.html">Timeline</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 mt-4">
+                                <h5 class="text-white mb-0">For Jobs</h5>
+                                <div class="text-muted mt-3">
+                                    <ul class="list-unstyled ff-secondary footer-list">
+                                        <li><a href="apps-job-lists.html">Job List</a></li>
+                                        <li><a href="apps-job-application.html">application</a></li>
+                                        <li><a href="apps-job-new.html">New Job</a></li>
+                                        <li><a href="apps-job-companies-lists.html">Company List</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 mt-4">
+                                <h5 class="text-white mb-0">Support</h5>
+                                <div class="text-muted mt-3">
+                                    <ul class="list-unstyled ff-secondary footer-list">
+                                        <li><a href="pages-faqs.html">FAQ</a></li>
+                                        <li><a href="pages-faqs.html">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 mt-4">
+                                <h5 class="text-white mb-0">Company</h5>
+                                <div class="text-muted mt-3">
+                                    <ul class="list-unstyled ff-secondary footer-list">
+                                        <li><a href="pages-profile.html">About Us</a></li>
+                                        <li><a href="pages-gallery.html">Gallery</a></li>
+                                        <li><a href="pages-team.html">Team</a></li>
+                                        <li><a href="pages-pricing.html">Pricing</a></li>
+                                        <li><a href="pages-timeline.html">Timeline</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row text-center text-sm-start align-items-center mt-5">
+                    <div class="col-sm-6">
+                        <div>
+                            <p class="copy-rights mb-0" style="color: #ffff;">
+                                <script> document.write(new Date().getFullYear()) </script> © Velzon - Themesbrand
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="text-sm-end mt-3 mt-sm-0" style="color: #ffff;">
+                            <ul class="list-inline mb-0 footer-list gap-4 fs-13">
+                                <li class="list-inline-item">
+                                    <a href="pages-privacy-policy.html">Privacy Policy</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="pages-term-conditions.html">Terms & Conditions</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="pages-privacy-policy.html">Security</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end footer -->
+
+        <!--start back-to-top-->
+        <button onclick="topFunction()" class="btn btn-info btn-icon landing-back-top" id="back-to-top">
+            <i class="ri-arrow-up-line"></i>
+        </button>
+        <!--end back-to-top-->
+    </div>
+    <!-- end layout wrapper -->
+
+
+    <!-- JAVASCRIPT -->
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+    <script src="assets/libs/feather-icons/feather.min.js"></script>
+    <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <script src="assets/js/plugins.js"></script>
+
+    <!--Swiper slider js-->
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/libs/chart.js/chart.umd.js"></script>
+    <script src="assets/js/pages/chartjs.init.js"></script>
+    <!--job landing init -->
+    <script src="assets/js/pages/job-lading.init.js"></script>
+</body>
+
+</html>
