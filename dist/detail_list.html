@@ -28,6 +28,39 @@
     <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
     <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
 </head>
+<style>
+    .form-check-input:checked {
+        background-color: #0E694B;
+        border-color: #0E694B;
+    }
+
+    .form-check-input[type=checkbox] {
+        border-radius: 3rem;
+    }
+
+    #map-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    }
+
+    #map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    }
+    @media (max-width: 600px) {
+        #map-container {
+            padding-bottom: 75%; /* 4:3 aspect ratio for smaller screens */
+        }
+    }
+
+</style>
 
 <body data-bs-spy="scroll" data-bs-target="#navbar-example">
 
@@ -77,7 +110,7 @@
 
             </div>
         </nav>
-        <!-- end navbar -->        
+        <!-- end navbar -->
         <!--  -->
         <div class="container" style="padding-top: 5rem;">
             <div class="page-title-right my-4">
@@ -88,80 +121,90 @@
                 </ol>
             </div>
             <div class="row mb-4">
-                <div class="col-10">
+                <div class="col-7 col-sm-8 col-md-9 col-lg-10 col-xl-10 col-xxl-10">
                     <h1 class="fw-bolder" style="font-size: 3vw;">
                         Title of the listing will come here
                     </h1>
 
                 </div>
-                <div class="col-2 align-content-center">
-                    <span class="fs-3 ">
-                        Share
-                        <i class="ri-share-circle-line"></i>
+                <div class="col-5 col-sm-4 col-md-3 col-lg-2 col-xl-2 col-xxl-2 d-flex align-content-center">
+                    <span class="fs-4 d-flex">
+                        <p>Share</p>
+                        <i class="ri-share-circle-line ps-2"></i>
                     </span>
-                    <span class="fs-3  ms-4">
+                    <span class="fs-4  ms-4">
                         <i class="ri-heart-line"></i>
                     </span>
                 </div>
             </div>
-            <div class="row mb-4">
-                <div class="col-8 ">
-                    <div class="position-relative card-body">
-                        <div class="position-absolute z-1 top-5 start-7 py-1 px-3 bg-danger rounded-5 text-white">
-                            Gold Listing
-                        </div>
-                        <div class="explore-place-bid-img overflow-hidden rounded">
-                            <img src="assets/images/image/top_lis_3.jpg" alt="" class="z-0 explore-img w-100 rounded-4 img-fluid ">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="explore-place-bid-img overflow-hidden rounded">
-                                <img src="assets/images/image/top_lis_3.jpg" alt="" class="z-0 explore-img w-100 rounded-4 img-fluid ">
+            <div class="img_session">
+                <div class="row mb-4">
+                    <div class="col-8 ">
+                        <div class="position-relative card-body">
+                            <div class="position-absolute z-1 top-5 start-7 py-1 px-3 bg-danger rounded-5 text-white">
+                                Gold Listing
                             </div>
-                        </div>
-                        <div class="col-12 mt-3">
                             <div class="explore-place-bid-img overflow-hidden rounded">
-                                <img src="assets/images/image/top_lis_3.jpg" alt="" class="z-0 explore-img w-100 rounded-4 img-fluid ">
+                                <img src="assets/images/image/top_lis_3.jpg" alt=""
+                                    class="z-0 explore-img w-100 rounded-4 img-fluid ">
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="row my-5">
-                <div class="col-6 ">
-                    <h2 class="fw-bold fs-1">$581,339.00 <span class="text-success">USD</span></h2>
-                    <p class="fw-semibold fs-5">
-                        $3,982 USD <span style="text-decoration: underline;"><a href="" class="text-success out-line" >Get Mortgage</a></span>
-                    </p>
-                    <button type="button" class="btn btn-success waves-effect waves-light rounded-3 mt-3">Request Visit Now!</button>
-                </div>
-                <div class="col-6">
-                    <div class="row gap-3">
-                        <div class="col-12">
-                            <span class="fs-4"><i class="ri-map-pin-fill text-danger fs-4 me-1"></i>Mars Street, Indonesia</span>
+                    <div class="col-4">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="explore-place-bid-img overflow-hidden rounded">
+                                    <img src="assets/images/image/top_lis_3.jpg" alt=""
+                                        class="z-0 explore-img w-100 rounded-4 img-fluid ">
+                                </div>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <div class="explore-place-bid-img overflow-hidden rounded">
+                                    <img src="assets/images/image/top_lis_3.jpg" alt=""
+                                        class="z-0 explore-img w-100 rounded-4 img-fluid ">
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-12 d-flex justify-content-between bg-light rounded-4 py-1">
-                            <span class="fs-5"><i class="ri-layout-grid-line text-danger fs-5 me-1"></i>1,800 Sq Ft</span>
-                            <span class="fs-5"><i class="ri-hotel-bed-fill text-danger fs-5 me-1"></i>2 Bedroom</span>
-                            <span class="fs-5"><i class="las la-bath fs-5 me-1"></i>3 Bathroom</span>
+                    </div>
+                </div>
+                <div class="row my-5">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 ">
+                        <h2 class="fw-bold fs-1">$581,339.00 <span class="text-success">USD</span></h2>
+                        <p class="fw-semibold fs-5">
+                            $3,982 USD <span style="text-decoration: underline;"><a href=""
+                                    class="text-success out-line">Get Mortgage</a></span>
+                        </p>
+                        <button type="button" class="btn btn-success waves-effect waves-light rounded-3 mt-3">Request
+                            Visit Now!</button>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                        <div class="row gap-3">
+                            <div class="col-12">
+                                <span class="fs-4"><i class="ri-map-pin-fill text-danger fs-4 me-1"></i>Mars Street,
+                                    Indonesia</span>
+                            </div>
+                            <div class="col-12 d-flex justify-content-between bg-light rounded-4 py-1">
+                                <span class="fs-5"><i class="ri-layout-grid-line text-danger fs-5 me-1"></i>1,800 Sq
+                                    Ft</span>
+                                <span class="fs-5"><i class="ri-hotel-bed-fill text-danger fs-5 me-1"></i>2
+                                    Bedroom</span>
+                                <span class="fs-5"><i class="las la-bath fs-5 me-1"></i>3 Bathroom</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-8">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-8 col-xl-8 col-xxl-8">
                     <h2 class="fs-1 fw-bolder">Property description</h2>
                     <p class="text-success fw-semibold">This Property for</p>
                     <hr>
                     <div class="row">
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                             <!-- <h3 class="fw-bolder fs-2 my-3 text-success">Popular categories</h3> -->
                             <!-- Tables Without Borders -->
                             <table class="table table-borderless table-nowrap">
-                                
+
                                 <tbody>
                                     <tr>
                                         <th scope="row">US REAL ESTATE</th>
@@ -186,11 +229,11 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                             <!-- <h3 class="fw-bolder fs-2 my-3 text-success">Popular categories</h3> -->
                             <!-- Tables Without Borders -->
                             <table class="table table-borderless table-nowrap">
-                                
+
                                 <tbody>
                                     <tr>
                                         <th scope="row">US REAL ESTATE</th>
@@ -219,7 +262,10 @@
                     <hr>
                     <div class="decp">
                         <h3 class="text-success fw-semibold">Description</h3>
-                        <p>Detached Homes and Townhosues in GTA region provides residents with the perfect blend of both natural and urban amenities. With quick and convenient access to the GO Station, Big Box Stores, Highways 401 & 407, District Hospital, Rattlesnake Point Conservation Area and so much more.</p>
+                        <p>Detached Homes and Townhosues in GTA region provides residents with the perfect blend of both
+                            natural and urban amenities. With quick and convenient access to the GO Station, Big Box
+                            Stores, Highways 401 & 407, District Hospital, Rattlesnake Point Conservation Area and so
+                            much more.</p>
                     </div>
 
                     <row>
@@ -229,7 +275,7 @@
                             <!-- <h3 class="fw-bolder fs-2 my-3 text-success">Popular categories</h3> -->
                             <!-- Tables Without Borders -->
                             <table class="table table-borderless table-nowrap">
-                                
+
                                 <tbody>
                                     <tr>
                                         <th scope="row">US REAL ESTATE</th>
@@ -243,12 +289,12 @@
                                         <th scope="row">Reports & Studies</th>
                                         <td class="text-end">$339,330 CAD</td>
                                     </tr>
-                                    
+
                                 </tbody>
                             </table>
                         </div>
                     </row>
-                    
+
                     <row class="Population">
                         <h3 class="text-success fw-semibold">Population</h3>
                         <hr>
@@ -256,7 +302,7 @@
                             <!-- <h3 class="fw-bolder fs-2 my-3 text-success">Popular categories</h3> -->
                             <!-- Tables Without Borders -->
                             <table class="table table-borderless table-nowrap">
-                                
+
                                 <tbody>
                                     <tr>
                                         <th scope="row">US REAL ESTATE</th>
@@ -270,20 +316,21 @@
                                         <th scope="row">Reports & Studies</th>
                                         <td class="text-end">29,330 </td>
                                     </tr>
-                                    
+
                                 </tbody>
                             </table>
                         </div>
                     </row>
                 </div>
-                <div class="form-section col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 ">
+                <div class="form-section col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 ">
                     <div class="row mb-3">
-                        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 align-items-center"> 
-                            <img src="assets/images/users/avatar-3.jpg" class="flex-shrink-0 avatar-xl rounded-4" alt="...">
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 align-items-center">
+                            <img src="assets/images/users/avatar-3.jpg" class="flex-shrink-0 avatar-xl rounded-4"
+                                alt="...">
                         </div>
-                       
+
                         <div class="col-7 mt-2 align-content-center ms-3">
-                            <h2 class="mt-0 fw-bolder fs-3" >Rishabh Gandhi </h2>
+                            <h2 class="mt-0 fw-bolder fs-3">Rishabh Gandhi </h2>
                             <p class="fs-11 text-success">Remax Real Estate Centre</p>
                         </div>
                         <div class="col-12 location d-flex mt-4">
@@ -317,7 +364,8 @@
                     <form action="">
                         <div class="mb-3">
                             <label for="employeeName" class="form-label fs-10">Your Name</label>
-                            <input type="text" class="form-control rounded-4" id="employeeName" placeholder="Enter emploree name">
+                            <input type="text" class="form-control rounded-4" id="employeeName"
+                                placeholder="Enter emploree name">
                         </div>
                         <div class="mb-3">
                             <label for="broker" class="form-label fs-10">Your Email</label>
@@ -332,24 +380,891 @@
                             <textarea rows="4" class="form-control rounded-4" id="message"> </textarea>
                         </div>
                         <div class="btn btn-success w-100 text-align-center rounded-4">Send Message</div>
-                        <p style="color: #B8B8B8; text-align: center; font-size: 12px; margin-top: 10px;">This site is protected by reCAPTCHA. Google&nbsp;Privacy Policy&nbsp;and&nbsp;Terms of Service&nbsp;apply.</p>
+                        <p style="color: #B8B8B8; text-align: center; font-size: 12px; margin-top: 10px;">This site is
+                            protected by reCAPTCHA. Google&nbsp;Privacy Policy&nbsp;and&nbsp;Terms of
+                            Service&nbsp;apply.</p>
                     </form>
-                    
+
                 </div>
             </div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                    <h3 class="text-success fw-semibold">Other Demographics</h3>
+                    <hr>
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-3">
+                            <div class="list_group">
+                                <label class="list-group-ite d-flex align-items-center">
+                                    <input class="form-check-input me-1" type="checkbox" value="">
+                                    <span>Backyard</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-3">
+                            <div class="list_group">
+                                <label class="list-group-ite d-flex align-items-center">
+                                    <input class="form-check-input me-1" type="checkbox" value="">
+                                    <span>Pet Friendly</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-3">
+                            <div class="list_group">
+                                <label class="list-group-ite d-flex align-items-center">
+                                    <input class="form-check-input me-1" type="checkbox" value="">
+                                    <span>Balcony</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-3">
+                            <div class="list_group">
+                                <label class="list-group-ite d-flex align-items-center">
+                                    <input class="form-check-input me-1" type="checkbox" value="">
+                                    <span>Swimming Pool</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!--  -->
+
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-3">
+                            <div class="list_group">
+                                <label class="list-group-ite d-flex align-items-center">
+                                    <input class="form-check-input me-1" type="checkbox" value="">
+                                    <span>Backyard</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-3">
+                            <div class="list_group">
+                                <label class="list-group-ite d-flex align-items-center">
+                                    <input class="form-check-input me-1" type="checkbox" value="">
+                                    <span>Backyard</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-3">
+                            <div class="list_group">
+                                <label class="list-group-ite d-flex align-items-center">
+                                    <input class="form-check-input me-1" type="checkbox" value="">
+                                    <span>Backyard</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-3">
+                            <div class="list_group">
+                                <label class="list-group-ite d-flex align-items-center">
+                                    <input class="form-check-input me-1" type="checkbox" value="">
+                                    <span>Backyard</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!--  -->
+
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-3">
+                            <div class="list_group">
+                                <label class="list-group-ite d-flex align-items-center">
+                                    <input class="form-check-input me-1" type="checkbox" value="">
+                                    <span>Backyard</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-3">
+                            <div class="list_group">
+                                <label class="list-group-ite d-flex align-items-center">
+                                    <input class="form-check-input me-1" type="checkbox" value="">
+                                    <span>Backyard</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-3">
+                            <div class="list_group">
+                                <label class="list-group-ite d-flex align-items-center">
+                                    <input class="form-check-input me-1" type="checkbox" value="">
+                                    <span>Backyard</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-3">
+                            <div class="list_group">
+                                <label class="list-group-ite d-flex align-items-center">
+                                    <input class="form-check-input me-1" type="checkbox" value="">
+                                    <span>Backyard</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <p class="text-center mt-5 ">
+                            Is this home right up your alley? <span><a href=""
+                                    class="text-success text-decoration-underline">Get all the details now.</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                    <section class=" bg-success position-relative rounded-5 py-5 px-3">
+                        <div class="bg-overlay bg-overlay-pattern  "></div>
+                        <div class="container ">
+                            <div class="d-flex flex-column">
+                                <div class="lh-lg">
+                                    <div>
+                                        <h2 class="text-white fs-1 mb-0 fw-bolder pb-3">Getting around Bay Street
+                                            Corridor, Torronto, ON</h2>
+                                        <p class="text-white">The area around Bay Street Corridor, Toronto, ON is by far
+                                            a walker’s paradise. With all services and amenities nearby, you really
+                                            don’t need a car to run your errands. Regarding transit, there are
+                                            first-class public transportation options you can take advantage of. Bay
+                                            Street Corridor, Toronto, ON is in a very bikeable community, so you’ll have
+                                            a developed cycling infrastructure at your disposal. <br>Powered by <span><a
+                                                    href="" style="text-decoration:underline; color: #ffff;">Walk
+                                                    Score®</a></span></p>
+                                    </div>
+                                </div>
+                                <!-- end col -->
+                                <div class=" row bg-light rounded-4">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="card card-animate overflow-hidden">
+    
+                                                <div class="card-body" style="z-index:1 ;">
+                                                    <div class="d-flex align-items-center">
+                                                        
+                                                        <div class="flex-shrink-0">
+                                                            <div id="total_jobs" data-colors="[&quot;--vz-success&quot;]" class="apex-charts" dir="ltr"
+                                                                style="min-height: 88.5px;">
+                                                                <div id="apexcharts943vbj8u"
+                                                                    class="apexcharts-canvas apexcharts943vbj8u apexcharts-theme-light"
+                                                                    style="width: 105px; height: 88.5px;"><svg id="SvgjsSvg3138" width="105" height="88.5"
+                                                                        xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                                        xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev"
+                                                                        class="apexcharts-svg" xmlns:data="ApexChartsNS" transform="translate(0, 0)"
+                                                                        style="background: transparent;">
+                                                                        <foreignObject x="0" y="0" width="105" height="88.5">
+                                                                            <div class="apexcharts-legend" xmlns="http://www.w3.org/1999/xhtml"></div>
+                                                                        </foreignObject>
+                                                                        <g id="SvgjsG3140" class="apexcharts-inner apexcharts-graphical"
+                                                                            transform="translate(8.75, 1)">
+                                                                            <defs id="SvgjsDefs3139">
+                                                                                <clipPath id="gridRectMask943vbj8u">
+                                                                                    <rect id="SvgjsRect3141" width="93.5" height="97.5" x="-4" y="-6" rx="0"
+                                                                                        ry="0" opacity="1" stroke-width="0" stroke="none"
+                                                                                        stroke-dasharray="0" fill="#fff"></rect>
+                                                                                </clipPath>
+                                                                                <clipPath id="forecastMask943vbj8u"></clipPath>
+                                                                                <clipPath id="nonForecastMask943vbj8u"></clipPath>
+                                                                                <clipPath id="gridRectMarkerMask943vbj8u">
+                                                                                    <rect id="SvgjsRect3142" width="91.5" height="89.5" x="-2" y="-2" rx="0"
+                                                                                        ry="0" opacity="1" stroke-width="0" stroke="none"
+                                                                                        stroke-dasharray="0" fill="#fff"></rect>
+                                                                                </clipPath>
+                                                                            </defs>
+                                                                            <g id="SvgjsG3143" class="apexcharts-radialbar">
+                                                                                <g id="SvgjsG3144">
+                                                                                    <g id="SvgjsG3145" class="apexcharts-tracks">
+                                                                                        <g id="SvgjsG3146"
+                                                                                            class="apexcharts-radialbar-track apexcharts-track" rel="1">
+                                                                                            <path id="apexcharts-radialbarTrack-0"
+                                                                                                d="M 43.75 9.926829268292678 A 32.82317073170732 32.82317073170732 0 1 1 43.74427127602695 9.926829768218155 "
+                                                                                                fill="none" fill-opacity="1" stroke="rgba(14, 105, 75,0.85)"
+                                                                                                stroke-opacity="1" stroke-linecap="butt"
+                                                                                                stroke-width="5.098414634146341" stroke-dasharray="0"
+                                                                                                class="apexcharts-radialbar-area"
+                                                                                                data:pathOrig="M 43.75 9.926829268292678 A 32.82317073170732 32.82317073170732 0 1 1 43.74427127602695 9.926829768218155 ">
+                                                                                            </path>
+                                                                                        </g>
+                                                                                    </g>
+                                                                                    <g id="SvgjsG3148">
+                                                                                        <g id="SvgjsG3152"
+                                                                                            class="apexcharts-series apexcharts-radial-series"
+                                                                                            seriesName="series-1" rel="1" data:realIndex="0">
+                                                                                            <path id="SvgjsPath3153"
+                                                                                                d="M 43.75 9.926829268292678 A 32.82317073170732 32.82317073170732 0 1 1 33.607082434632055 11.53330959014139 "
+                                                                                                fill="none" fill-opacity="0.85"
+                                                                                                stroke="rgba(14, 105, 75,0.85)" stroke-opacity="1"
+                                                                                                stroke-linecap="butt" stroke-width="5.2560975609756095"
+                                                                                                stroke-dasharray="0"
+                                                                                                class="apexcharts-radialbar-area apexcharts-radialbar-slice-0"
+                                                                                                data:angle="342" data:value="95" index="0" j="0"
+                                                                                                data:pathOrig="M 43.75 9.926829268292678 A 32.82317073170732 32.82317073170732 0 1 1 33.607082434632055 11.53330959014139 ">
+                                                                                            </path>
+                                                                                        </g>
+                                                                                        <circle id="SvgjsCircle3149" r="30.273963414634153" cx="43.75"
+                                                                                            cy="42.75" class="apexcharts-radialbar-hollow"
+                                                                                            fill="transparent"></circle>
+                                                                                        <g id="SvgjsG3150" class="apexcharts-datalabels-group"
+                                                                                            transform="translate(0, 0) scale(1)" style="opacity: 1;"><text
+                                                                                                id="SvgjsText3151"
+                                                                                                font-family="Helvetica, Arial, sans-serif" x="43.75"
+                                                                                                y="50.75" text-anchor="middle" dominant-baseline="auto"
+                                                                                                font-size="16px" font-weight="600" fill="#373d3f"
+                                                                                                class="apexcharts-text apexcharts-datalabel-value"
+                                                                                                style="font-family: Helvetica, Arial, sans-serif;">95%</text>
+                                                                                        </g>
+                                                                                    </g>
+                                                                                </g>
+                                                                            </g>
+                                                                            <line id="SvgjsLine3154" x1="0" y1="0" x2="87.5" y2="0" stroke="#b6b6b6"
+                                                                                stroke-dasharray="0" stroke-width="1" stroke-linecap="butt"
+                                                                                class="apexcharts-ycrosshairs"></line>
+                                                                            <line id="SvgjsLine3155" x1="0" y1="0" x2="87.5" y2="0" stroke-dasharray="0"
+                                                                                stroke-width="0" stroke-linecap="butt"
+                                                                                class="apexcharts-ycrosshairs-hidden"></line>
+                                                                        </g>
+                                                                    </svg></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex-grow-1 overflow-hidden">
+                                                            
+                                                            <h4 class="fs-22 fw-semibold ff-secondary mb-0">
+                                                                <span class="counter-value text-success" data-target="36894">Walkr's</span>
+                                                            </h4>
+                                                            <p class="text-uppercase fw-medium text-muted text-truncate mb-3"> Total Jobs</p>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- end card body -->
+                                            </div>
+                                            <div class="card card-animate overflow-hidden">
+    
+                                                <div class="card-body" style="z-index:1 ;">
+                                                    <div class="d-flex align-items-center">
+                                                        
+                                                        <div class="flex-shrink-0">
+                                                            <div id="total_jobs" data-colors="[&quot;--vz-success&quot;]" class="apex-charts" dir="ltr"
+                                                                style="min-height: 88.5px;">
+                                                                <div id="apexcharts943vbj8u"
+                                                                    class="apexcharts-canvas apexcharts943vbj8u apexcharts-theme-light"
+                                                                    style="width: 105px; height: 88.5px;"><svg id="SvgjsSvg3138" width="105" height="88.5"
+                                                                        xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                                        xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev"
+                                                                        class="apexcharts-svg" xmlns:data="ApexChartsNS" transform="translate(0, 0)"
+                                                                        style="background: transparent;">
+                                                                        <foreignObject x="0" y="0" width="105" height="88.5">
+                                                                            <div class="apexcharts-legend" xmlns="http://www.w3.org/1999/xhtml"></div>
+                                                                        </foreignObject>
+                                                                        <g id="SvgjsG3140" class="apexcharts-inner apexcharts-graphical"
+                                                                            transform="translate(8.75, 1)">
+                                                                            <defs id="SvgjsDefs3139">
+                                                                                <clipPath id="gridRectMask943vbj8u">
+                                                                                    <rect id="SvgjsRect3141" width="93.5" height="97.5" x="-4" y="-6" rx="0"
+                                                                                        ry="0" opacity="1" stroke-width="0" stroke="none"
+                                                                                        stroke-dasharray="0" fill="#fff"></rect>
+                                                                                </clipPath>
+                                                                                <clipPath id="forecastMask943vbj8u"></clipPath>
+                                                                                <clipPath id="nonForecastMask943vbj8u"></clipPath>
+                                                                                <clipPath id="gridRectMarkerMask943vbj8u">
+                                                                                    <rect id="SvgjsRect3142" width="91.5" height="89.5" x="-2" y="-2" rx="0"
+                                                                                        ry="0" opacity="1" stroke-width="0" stroke="none"
+                                                                                        stroke-dasharray="0" fill="#fff"></rect>
+                                                                                </clipPath>
+                                                                            </defs>
+                                                                            <g id="SvgjsG3143" class="apexcharts-radialbar">
+                                                                                <g id="SvgjsG3144">
+                                                                                    <g id="SvgjsG3145" class="apexcharts-tracks">
+                                                                                        <g id="SvgjsG3146"
+                                                                                            class="apexcharts-radialbar-track apexcharts-track" rel="1">
+                                                                                            <path id="apexcharts-radialbarTrack-0"
+                                                                                                d="M 43.75 9.926829268292678 A 32.82317073170732 32.82317073170732 0 1 1 43.74427127602695 9.926829768218155 "
+                                                                                                fill="none" fill-opacity="1" stroke="rgba(14, 105, 75,0.85)"
+                                                                                                stroke-opacity="1" stroke-linecap="butt"
+                                                                                                stroke-width="5.098414634146341" stroke-dasharray="0"
+                                                                                                class="apexcharts-radialbar-area"
+                                                                                                data:pathOrig="M 43.75 9.926829268292678 A 32.82317073170732 32.82317073170732 0 1 1 43.74427127602695 9.926829768218155 ">
+                                                                                            </path>
+                                                                                        </g>
+                                                                                    </g>
+                                                                                    <g id="SvgjsG3148">
+                                                                                        <g id="SvgjsG3152"
+                                                                                            class="apexcharts-series apexcharts-radial-series"
+                                                                                            seriesName="series-1" rel="1" data:realIndex="0">
+                                                                                            <path id="SvgjsPath3153"
+                                                                                                d="M 43.75 9.926829268292678 A 32.82317073170732 32.82317073170732 0 1 1 33.607082434632055 11.53330959014139 "
+                                                                                                fill="none" fill-opacity="0.85"
+                                                                                                stroke="rgba(129, 181, 44,0.85)" stroke-opacity="1"
+                                                                                                stroke-linecap="butt" stroke-width="5.2560975609756095"
+                                                                                                stroke-dasharray="0"
+                                                                                                class="apexcharts-radialbar-area apexcharts-radialbar-slice-0"
+                                                                                                data:angle="342" data:value="95" index="0" j="0"
+                                                                                                data:pathOrig="M 43.75 9.926829268292678 A 32.82317073170732 32.82317073170732 0 1 1 33.607082434632055 11.53330959014139 ">
+                                                                                            </path>
+                                                                                        </g>
+                                                                                        <circle id="SvgjsCircle3149" r="30.273963414634153" cx="43.75"
+                                                                                            cy="42.75" class="apexcharts-radialbar-hollow"
+                                                                                            fill="transparent"></circle>
+                                                                                        <g id="SvgjsG3150" class="apexcharts-datalabels-group"
+                                                                                            transform="translate(0, 0) scale(1)" style="opacity: 1;"><text
+                                                                                                id="SvgjsText3151"
+                                                                                                font-family="Helvetica, Arial, sans-serif" x="43.75"
+                                                                                                y="50.75" text-anchor="middle" dominant-baseline="auto"
+                                                                                                font-size="16px" font-weight="600" fill="#373d3f"
+                                                                                                class="apexcharts-text apexcharts-datalabel-value"
+                                                                                                style="font-family: Helvetica, Arial, sans-serif;">95%</text>
+                                                                                        </g>
+                                                                                    </g>
+                                                                                </g>
+                                                                            </g>
+                                                                            <line id="SvgjsLine3154" x1="0" y1="0" x2="87.5" y2="0" stroke="#b6b6b6"
+                                                                                stroke-dasharray="0" stroke-width="1" stroke-linecap="butt"
+                                                                                class="apexcharts-ycrosshairs"></line>
+                                                                            <line id="SvgjsLine3155" x1="0" y1="0" x2="87.5" y2="0" stroke-dasharray="0"
+                                                                                stroke-width="0" stroke-linecap="butt"
+                                                                                class="apexcharts-ycrosshairs-hidden"></line>
+                                                                        </g>
+                                                                    </svg></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex-grow-1 overflow-hidden">
+                                                            
+                                                            <h4 class="fs-22 fw-semibold ff-secondary mb-0">
+                                                                <span class="counter-value text-success" data-target="36894">Walkr's</span>
+                                                            </h4>
+                                                            <p class="text-uppercase fw-medium text-muted text-truncate mb-3"> Total Jobs</p>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- end card body -->
+                                            </div>
+                                            <div class="card card-animate overflow-hidden">
+    
+                                                <div class="card-body" style="z-index:1 ;">
+                                                    <div class="d-flex align-items-center">
+                                                        
+                                                        <div class="flex-shrink-0">
+                                                            <div id="total_jobs" data-colors="[&quot;--vz-success&quot;]" class="apex-charts" dir="ltr"
+                                                                style="min-height: 88.5px;">
+                                                                <div id="apexcharts943vbj8u"
+                                                                    class="apexcharts-canvas apexcharts943vbj8u apexcharts-theme-light"
+                                                                    style="width: 105px; height: 88.5px;"><svg id="SvgjsSvg3138" width="105" height="88.5"
+                                                                        xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                                        xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev"
+                                                                        class="apexcharts-svg" xmlns:data="ApexChartsNS" transform="translate(0, 0)"
+                                                                        style="background: transparent;">
+                                                                        <foreignObject x="0" y="0" width="105" height="88.5">
+                                                                            <div class="apexcharts-legend" xmlns="http://www.w3.org/1999/xhtml"></div>
+                                                                        </foreignObject>
+                                                                        <g id="SvgjsG3140" class="apexcharts-inner apexcharts-graphical"
+                                                                            transform="translate(8.75, 1)">
+                                                                            <defs id="SvgjsDefs3139">
+                                                                                <clipPath id="gridRectMask943vbj8u">
+                                                                                    <rect id="SvgjsRect3141" width="93.5" height="97.5" x="-4" y="-6" rx="0"
+                                                                                        ry="0" opacity="1" stroke-width="0" stroke="none"
+                                                                                        stroke-dasharray="0" fill="#fff"></rect>
+                                                                                </clipPath>
+                                                                                <clipPath id="forecastMask943vbj8u"></clipPath>
+                                                                                <clipPath id="nonForecastMask943vbj8u"></clipPath>
+                                                                                <clipPath id="gridRectMarkerMask943vbj8u">
+                                                                                    <rect id="SvgjsRect3142" width="91.5" height="89.5" x="-2" y="-2" rx="0"
+                                                                                        ry="0" opacity="1" stroke-width="0" stroke="none"
+                                                                                        stroke-dasharray="0" fill="#fff"></rect>
+                                                                                </clipPath>
+                                                                            </defs>
+                                                                            <g id="SvgjsG3143" class="apexcharts-radialbar">
+                                                                                <g id="SvgjsG3144">
+                                                                                    <g id="SvgjsG3145" class="apexcharts-tracks">
+                                                                                        <g id="SvgjsG3146"
+                                                                                            class="apexcharts-radialbar-track apexcharts-track" rel="1">
+                                                                                            <path id="apexcharts-radialbarTrack-0"
+                                                                                                d="M 43.75 9.926829268292678 A 32.82317073170732 32.82317073170732 0 1 1 43.74427127602695 9.926829768218155 "
+                                                                                                fill="none" fill-opacity="1" stroke="rgba(129, 181, 44,0.85)"
+                                                                                                stroke-opacity="1" stroke-linecap="butt"
+                                                                                                stroke-width="5.098414634146341" stroke-dasharray="0"
+                                                                                                class="apexcharts-radialbar-area"
+                                                                                                data:pathOrig="M 43.75 9.926829268292678 A 32.82317073170732 32.82317073170732 0 1 1 43.74427127602695 9.926829768218155 ">
+                                                                                            </path>
+                                                                                        </g>
+                                                                                    </g>
+                                                                                    <g id="SvgjsG3148">
+                                                                                        <g id="SvgjsG3152"
+                                                                                            class="apexcharts-series apexcharts-radial-series"
+                                                                                            seriesName="series-1" rel="1" data:realIndex="0">
+                                                                                            <path id="SvgjsPath3153"
+                                                                                                d="M 43.75 9.926829268292678 A 32.82317073170732 32.82317073170732 0 1 1 33.607082434632055 11.53330959014139 "
+                                                                                                fill="none" fill-opacity="0.85"
+                                                                                                stroke="rgba(0, 67, 206,0.85)" stroke-opacity="1"
+                                                                                                stroke-linecap="butt" stroke-width="5.2560975609756095"
+                                                                                                stroke-dasharray="0"
+                                                                                                class="apexcharts-radialbar-area apexcharts-radialbar-slice-0"
+                                                                                                data:angle="342" data:value="95" index="0" j="0"
+                                                                                                data:pathOrig="M 43.75 9.926829268292678 A 32.82317073170732 32.82317073170732 0 1 1 33.607082434632055 11.53330959014139 ">
+                                                                                            </path>
+                                                                                        </g>
+                                                                                        <circle id="SvgjsCircle3149" r="30.273963414634153" cx="43.75"
+                                                                                            cy="42.75" class="apexcharts-radialbar-hollow"
+                                                                                            fill="transparent"></circle>
+                                                                                        <g id="SvgjsG3150" class="apexcharts-datalabels-group"
+                                                                                            transform="translate(0, 0) scale(1)" style="opacity: 1;"><text
+                                                                                                id="SvgjsText3151"
+                                                                                                font-family="Helvetica, Arial, sans-serif" x="43.75"
+                                                                                                y="50.75" text-anchor="middle" dominant-baseline="auto"
+                                                                                                font-size="16px" font-weight="600" fill="#373d3f"
+                                                                                                class="apexcharts-text apexcharts-datalabel-value"
+                                                                                                style="font-family: Helvetica, Arial, sans-serif;">95%</text>
+                                                                                        </g>
+                                                                                    </g>
+                                                                                </g>
+                                                                            </g>
+                                                                            <line id="SvgjsLine3154" x1="0" y1="0" x2="87.5" y2="0" stroke="#b6b6b6"
+                                                                                stroke-dasharray="0" stroke-width="1" stroke-linecap="butt"
+                                                                                class="apexcharts-ycrosshairs"></line>
+                                                                            <line id="SvgjsLine3155" x1="0" y1="0" x2="87.5" y2="0" stroke-dasharray="0"
+                                                                                stroke-width="0" stroke-linecap="butt"
+                                                                                class="apexcharts-ycrosshairs-hidden"></line>
+                                                                        </g>
+                                                                    </svg></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex-grow-1 overflow-hidden">
+                                                            
+                                                            <h4 class="fs-22 fw-semibold ff-secondary mb-0">
+                                                                <span class="counter-value text-success" data-target="36894">Walkr's</span>
+                                                            </h4>
+                                                            <p class="text-uppercase fw-medium text-muted text-truncate mb-3"> Total Jobs</p>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- end card body -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <!-- end row -->
+                        </div>
+                        <!-- end container -->
+                    </section>
+
+                    <div class="rate_Session mt-5">
+                        <div class="rate_title my-5">
+                            <h3 class="fs-2 fw-bolder">
+                                5-year fixed mortgage rates
+                            </h3>
+                            <p class="mt-4">
+                                <span><a href="" class="text-success ">Mortgage rate comparison</a></span> for 253
+                                Birkdale Rd
+                            </p>
+                        </div>
+                        <div class="row bg-light rounded-4 p-2">
+                            <div class="col-10 pb-2">
+                                <div>
+                                    <div class="btn-group bg-white rounded-4 ms-4 mt-3">
+                                        <div class="btn  text-align-center" type="button" id="defaultDropdown"
+                                            data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                                            <p class="fw-bolder m-0">Transaction type</p>
+                                            <p class="pt-1 m-0">Buying a home <i class="ri-arrow-down-s-fill"></i></p>
+
+                                        </div>
+
+                                        <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn-group bg-white rounded-4 ms-4 mt-3">
+                                        <div class="btn  text-align-center" type="button" id="defaultDropdown"
+                                            data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                                            <p class="fw-bolder m-0">Rate type</p>
+                                            <p class="pt-1 m-0">Fixed <i class="ri-arrow-down-s-fill"></i></p>
+
+                                        </div>
+
+                                        <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn-group bg-white rounded-4 ms-4 mt-3">
+                                        <div class="btn  text-align-center" type="button" id="defaultDropdown"
+                                            data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                                            <p class="fw-bolder m-0">Purchase Price</p>
+                                            <p class="pt-1 m-0">$800,000</p>
+
+                                        </div>
+
+                                        <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!--  -->
+
+                                    <div class="btn-group bg-white rounded-4 ms-4 mt-3">
+                                        <div class="btn  text-align-center" type="button" id="defaultDropdown"
+                                            data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                                            <p class="fw-bolder m-0">Down Payment</p>
+                                            <p class="pt-1 m-0">$120,000</p>
+
+                                        </div>
+
+                                        <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn-group bg-white rounded-4 ms-4 mt-3 px-2">
+                                        <div class="btn  text-align-center" type="button" id="defaultDropdown"
+                                            data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                                            <p class="fw-bolder m-0">%</p>
+                                            <p class="pt-1 m-0">15</p>
+
+                                        </div>
+
+                                        <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn-group bg-white rounded-4 ms-4 mt-3">
+                                        <div class="btn  text-align-center" type="button" id="defaultDropdown"
+                                            data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                                            <p class="fw-bolder m-0">Rate term</p>
+                                            <p class="pt-1 m-0">5-year<i class="ri-arrow-down-s-fill"></i></p>
+
+                                        </div>
+
+                                        <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn-group bg-white rounded-4 ms-4 mt-3">
+                                        <div class="btn  text-align-center" type="button" id="defaultDropdown"
+                                            data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                                            <p class="fw-bolder m-0">Location</p>
+                                            <p class="pt-1 m-0">Toronto,ON</p>
+
+                                        </div>
+
+                                        <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!--  -->
+
+                                    <div class="btn-group bg-white rounded-4 ms-4 mt-3">
+                                        <div class="btn  text-align-center" type="button" id="defaultDropdown"
+                                            data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                                            <p class="fw-bolder m-0">Transaction type</p>
+                                            <p class="pt-1 m-0">Buying a home <i class="ri-arrow-down-s-fill"></i></p>
+
+                                        </div>
+
+                                        <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn-group bg-white rounded-4 ms-4 mt-3">
+                                        <div class="btn  text-align-center" type="button" id="defaultDropdown"
+                                            data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                                            <p class="fw-bolder m-0">Rate type</p>
+                                            <p class="pt-1 m-0">Fixed <i class="ri-arrow-down-s-fill"></i></p>
+
+                                        </div>
+
+                                        <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="btn-group bg-white rounded-4 ms-4 mt-3">
+                                        <div class="btn  text-align-center" type="button" id="defaultDropdown"
+                                            data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                                            <p class="fw-bolder m-0">Purchase Price</p>
+                                            <p class="pt-1 m-0">$800,000</p>
+
+                                        </div>
+
+                                        <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                            <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!--  -->
+
+                                </div>
+                            </div>
+                            <div class="col-2 mt-3 ">
+                                <span class="d-flex align-items-baseline">
+                                    <i class="las la-sliders-h fs-5 fw-bolder"></i>
+                                    <p class="fw-semibold fs-23">More</p>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="table_session row mt-5">
+                <div class="col-12 col-lg-8 ">
+                    <div class="card">
+                        
+                        <!-- end card header -->
+
+                        <div class="card-body">
+                            <div class="table-responsive table-card">
+                                <table class="table table-borderless table-hover table-nowrap align-middle mb-0">
+                                    <thead class="table-light">
+                                        <tr class="text-muted">
+                                            <th scope="col">Rate</th>
+                                            <th scope="col">Provider</th>
+                                            <th scope="col">Payment</th>
+                                            <th scope="col" style="width: 16%;"></th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="btn  text-align-center" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                                                    <p class="fw-bolder m-0">Feature</p>
+                                                    <h3 class="fs-4 fw-bolder pt-1 m-0">4.7%</h3>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <img src="./assets/images/image/Avatar_.svg" alt="" class="avatar-xs rounded-circle me-2 material-shadow">
+                                                <a href="#javascript: void(0);" class="text-body fw-medium">Big 6 Bank</a>
+                                            </td>
+                                            <td>
+                                                <div class="text-nowrap">
+                                                    <h4 class="fs-5 fw-bolder">$3,982/mos</h4>
+                                                </div>
+                                            </td>
+                                            <td><button type="button" class="btn btn-success waves-effect waves-light">Inquire</button></td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="btn  text-align-center" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                                                    <p class="fw-bolder m-0">Feature</p>
+                                                    <h3 class="fs-4 fw-bolder pt-1 m-0">4.7%</h3>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <img src="./assets/images/image/Avatar_.svg" alt="" class="avatar-xs rounded-circle me-2 material-shadow">
+                                                <a href="#javascript: void(0);" class="text-body fw-medium">Big 6 Bank</a>
+                                            </td>
+                                            <td>
+                                                <div class="text-nowrap">
+                                                    <h4 class="fs-5 fw-bolder">$3,982/mos</h4>
+                                                </div>
+                                            </td>
+                                            <td><button type="button" class="btn btn-success waves-effect waves-light">Inquire</button></td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="btn  text-align-center" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                                                    <p class="fw-bolder m-0">Feature</p>
+                                                    <h3 class="fs-4 fw-bolder pt-1 m-0">4.7%</h3>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <img src="./assets/images/image/Avatar_.svg" alt="" class="avatar-xs rounded-circle me-2 material-shadow">
+                                                <a href="#javascript: void(0);" class="text-body fw-medium">Big 6 Bank</a>
+                                            </td>
+                                            <td>
+                                                <div class="text-nowrap">
+                                                    <h4 class="fs-5 fw-bolder">$3,982/mos</h4>
+                                                </div>
+                                            </td>
+                                            <td><button type="button" class="btn btn-success waves-effect waves-light">Inquire</button></td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="btn  text-align-center" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                                                    <p class="fw-bolder m-0">Feature</p>
+                                                    <h3 class="fs-4 fw-bolder pt-1 m-0">4.7%</h3>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <img src="./assets/images/image/Avatar_.svg" alt="" class="avatar-xs rounded-circle me-2 material-shadow">
+                                                <a href="#javascript: void(0);" class="text-body fw-medium">Big 6 Bank</a>
+                                            </td>
+                                            <td>
+                                                <div class="text-nowrap">
+                                                    <h4 class="fs-5 fw-bolder">$3,982/mos</h4>
+                                                </div>
+                                            </td>
+                                            <td><button type="button" class="btn btn-success waves-effect waves-light">Inquire</button></td>
+                                            
+                                        </tr>
+                                        
+                                    </tbody><!-- end tbody -->
+                                    
+                                </table>
+                                <p class="text-center fw-semibold">
+                                    <a href="" class=" text-success">
+                                        See More <span><i class="ri-arrow-down-s-line  text-success"></i></span>
+                                    </a>
+                                </p>
+                                <!-- end table -->
+                            </div><!-- end table responsive -->
+                        </div><!-- end card body -->
+                    </div><!-- end card -->
+                </div>
+            </div>
+            <div class="location_session row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+                    <h2 class="fw-bolder fs-1 my-5"> Location </h2>
+                    <p>Location for Detached Homes and Townhouses in GTA Region ON</p>
+
+                    <div id="map-container">
+                        <iframe 
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.17542246378!2d-74.25819770275714!3d40.70531111372357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f4b9d72320d3%3A0xf4a3e7289c07d115!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1601917842865!5m2!1sen!2sin" 
+                          width="600" 
+                          height="450" 
+                          style="border:0;" 
+                          allowfullscreen="" 
+                          aria-hidden="false" 
+                          tabindex="0">
+                        </iframe>
+                      </div>
+                </div>
+            </div>
+
+           <!-- <div class="row">
+                <div class="col-8">
+                        <table>
+                            <tr>School</tr>
+                            <tr>Edgewood Public School</tr>
+                            <tr>0.1miles</tr>
+                            <tr>
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                            </tr>
+                        </table>
+
+                        <table class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <tr></tr>
+                            <tr>Lorem ipsum dolor sit amet consectetur</tr>
+                            <tr>0.2miles</tr>
+                            <tr>
+                            </tr>
+                        </table>
+                </div>
+           </div> -->
+            <div class="demograph_session row my-5">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                            <div class="Population-table">
+                                <h3 class="text-success fw-semibold my-4">Population</h3>
+                                <hr>
+                                <table class="table table-borderless table-nowrap">
+
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">US REAL ESTATE</th>
+                                            <td class="text-end">$339,330 CAD</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">International Real Estate</th>
+                                            <td class="text-end">$339,330 CAD</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="Martial_table">
+                                <h3 class="text-success fw-semibold my-4">Martial Status</h3>
+                                <hr>
+                                <table class="table table-borderless table-nowrap">
+    
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">US REAL</th>
+                                            <td class="text-end">$339,330 CAD</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">International</th>
+                                            <td class="text-end">$339,330 CAD</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">International</th>
+                                            <td class="text-end">$339,330 CAD</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">International</th>
+                                            <td class="text-end">$339,330 CAD</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Internal</th>
+                                            <td class="text-end">$339,330 CAD</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                            <div class="Martial_table">
+                                <h3 class="text-success fw-semibold my-4">Martial Status</h3>
+                                <hr>
+                                <table class="table table-borderless table-nowrap">
+    
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">US REAL</th>
+                                            <td class="text-end">$339,330 CAD</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">International</th>
+                                            <td class="text-end">$339,330 CAD</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">International</th>
+                                            <td class="text-end">$339,330 CAD</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">International</th>
+                                            <td class="text-end">$339,330 CAD</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Internal</th>
+                                            <td class="text-end">$339,330 CAD</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="Population-table">
+                                <h3 class="text-success fw-semibold my-4">Population</h3>
+                                <hr>
+                                <table class="table table-borderless table-nowrap">
+
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">US REAL ESTATE</th>
+                                            <td class="text-end">$339,330 CAD</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">International Real Estate</th>
+                                            <td class="text-end">$339,330 CAD</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <p class="mt-5">
+                        Toronto has 2,794,356 inhabitants with an average age of 41.5. There are 1,160,895 households in the city, while the median after-tax income per household is $74,000 and the average number of people living under the same roof is 2.4. The median value of property in Toronto is set at $900,000 and the average commute is 31 min long. Read more about <span><a href="" class="text-success">Toronto demographics.</a></span> 
+                    </p>
+                </div>
+
+            </div>
+           
+
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -369,10 +1284,12 @@
                     <div class="col-lg-4">
                         <div class="card explore-box card-animate">
                             <div class="position-relative card-body">
-                                <div class="position-absolute z-1 top-5 start-7 py-1 px-3 bg-danger rounded-5 text-white">
+                                <div
+                                    class="position-absolute z-1 top-5 start-7 py-1 px-3 bg-danger rounded-5 text-white">
                                     Feature</div>
                                 <div class="explore-place-bid-img overflow-hidden rounded">
-                                    <img src="assets/images/image/top_lis_1.jpg" alt="" class="z-0 explore-img w-100 rounded-4">
+                                    <img src="assets/images/image/top_lis_1.jpg" alt=""
+                                        class="z-0 explore-img w-100 rounded-4">
                                 </div>
                                 <div class="card-body">
                                     <h2 class="fw-semibold mb-2">Title of the Listing will come here...</h2>
@@ -384,19 +1301,22 @@
                                     <div class="d-flex justify-content-between mt-3">
                                         <div class="area">
                                             <span class="d-flex align-items-center">
-                                                <img src="./assets/images/image/Vector.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <img src="./assets/images/image/Vector.png" class="list-inline-item"
+                                                    height="18px" alt="" srcset="">
                                                 <p class="fs-10 m-0">800 Sq Ft</p>
                                             </span>
                                         </div>
                                         <div class="bed">
                                             <span class="d-flex align-items-center">
-                                                <img src="./assets/images/image/local_hotel.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <img src="./assets/images/image/local_hotel.png"
+                                                    class="list-inline-item" height="18px" alt="" srcset="">
                                                 <p class="fs-10 m-0">1 Bedroom</p>
                                             </span>
                                         </div>
                                         <div class="bath">
                                             <span class="d-flex align-items-center">
-                                                <img src="./assets/images/image/Group.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <img src="./assets/images/image/Group.png" class="list-inline-item"
+                                                    height="18px" alt="" srcset="">
                                                 <p class="fs-10 m-0">2 Bathroom</p>
                                             </span>
                                         </div>
@@ -412,10 +1332,12 @@
                     <div class="col-lg-4">
                         <div class="card explore-box card-animate">
                             <div class="position-relative card-body">
-                                <div class="position-absolute z-1 top-5 start-7 py-1 px-3 bg-danger rounded-5 text-white">
+                                <div
+                                    class="position-absolute z-1 top-5 start-7 py-1 px-3 bg-danger rounded-5 text-white">
                                     Feature</div>
                                 <div class="explore-place-bid-img overflow-hidden rounded">
-                                    <img src="assets/images/image/top_lis_2.jpg" alt="" class="z-0 explore-img w-100 rounded-4">
+                                    <img src="assets/images/image/top_lis_2.jpg" alt=""
+                                        class="z-0 explore-img w-100 rounded-4">
                                 </div>
                                 <div class="card-body">
                                     <h2 class="fw-semibold mb-2">Title of the Listing will come here...</h2>
@@ -427,19 +1349,22 @@
                                     <div class="d-flex justify-content-between mt-3">
                                         <div class="area">
                                             <span class="d-flex align-items-center">
-                                                <img src="./assets/images/image/Vector.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <img src="./assets/images/image/Vector.png" class="list-inline-item"
+                                                    height="18px" alt="" srcset="">
                                                 <p class="fs-10 m-0">800 Sq Ft</p>
                                             </span>
                                         </div>
                                         <div class="bed">
                                             <span class="d-flex align-items-center">
-                                                <img src="./assets/images/image/local_hotel.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <img src="./assets/images/image/local_hotel.png"
+                                                    class="list-inline-item" height="18px" alt="" srcset="">
                                                 <p class="fs-10 m-0">1 Bedroom</p>
                                             </span>
                                         </div>
                                         <div class="bath">
                                             <span class="d-flex align-items-center">
-                                                <img src="./assets/images/image/Group.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <img src="./assets/images/image/Group.png" class="list-inline-item"
+                                                    height="18px" alt="" srcset="">
                                                 <p class="fs-10 m-0">2 Bathroom</p>
                                             </span>
                                         </div>
@@ -455,10 +1380,12 @@
                     <div class="col-lg-4">
                         <div class="card explore-box card-animate">
                             <div class="position-relative card-body">
-                                <div class="position-absolute z-1 top-5 start-7 py-1 px-3 bg-danger rounded-5 text-white">
+                                <div
+                                    class="position-absolute z-1 top-5 start-7 py-1 px-3 bg-danger rounded-5 text-white">
                                     Feature</div>
                                 <div class="explore-place-bid-img overflow-hidden rounded">
-                                    <img src="assets/images/image/top_lis_3.jpg" alt="" class="z-0 explore-img w-100 rounded-4">
+                                    <img src="assets/images/image/top_lis_3.jpg" alt=""
+                                        class="z-0 explore-img w-100 rounded-4">
                                 </div>
                                 <div class="card-body">
                                     <h2 class="fw-semibold mb-2">Title of the Listing will come here...</h2>
@@ -470,19 +1397,22 @@
                                     <div class="d-flex justify-content-between mt-3">
                                         <div class="area">
                                             <span class="d-flex align-items-center">
-                                                <img src="./assets/images/image/Vector.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <img src="./assets/images/image/Vector.png" class="list-inline-item"
+                                                    height="18px" alt="" srcset="">
                                                 <p class="fs-10 m-0">800 Sq Ft</p>
                                             </span>
                                         </div>
                                         <div class="bed">
                                             <span class="d-flex align-items-center">
-                                                <img src="./assets/images/image/local_hotel.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <img src="./assets/images/image/local_hotel.png"
+                                                    class="list-inline-item" height="18px" alt="" srcset="">
                                                 <p class="fs-10 m-0">1 Bedroom</p>
                                             </span>
                                         </div>
                                         <div class="bath">
                                             <span class="d-flex align-items-center">
-                                                <img src="./assets/images/image/Group.png" class="list-inline-item" height="18px" alt="" srcset="">
+                                                <img src="./assets/images/image/Group.png" class="list-inline-item"
+                                                    height="18px" alt="" srcset="">
                                                 <p class="fs-10 m-0">2 Bathroom</p>
                                             </span>
                                         </div>
@@ -510,12 +1440,14 @@
                     <div class="col-lg-6 flex-grow-1">
                         <!-- figures Images -->
                         <figure class="figure my-4">
-                            <img src="./assets/images/image/freq_1.jpg" class="figure-img img-fluid rounded-4 " style="height: 35rem; width: 30rem;" alt="...">
+                            <img src="./assets/images/image/freq_1.jpg" class="figure-img img-fluid rounded-4 "
+                                style="height: 35rem; width: 30rem;" alt="...">
                             <!-- <figcaption class="figure-caption">A caption for the above image.</figcaption> -->
                         </figure>
                         <div class="position-absolute Que-section-small-img" style="top: 14rem;">
                             <figure class="figure my-4 position-relative  " style="left: 15rem;">
-                                <img src="./assets/images/image/freq_2.jpg" class="figure-img img-fluid rounded-4 " style="height: 18rem; width: 18rem;" alt="...">
+                                <img src="./assets/images/image/freq_2.jpg" class="figure-img img-fluid rounded-4 "
+                                    style="height: 18rem; width: 18rem;" alt="...">
                                 <!-- <figcaption class="figure-caption">A caption for the above image.</figcaption> -->
                             </figure>
                         </div>
@@ -539,11 +1471,16 @@
                                         <p class="fs-6 text-success fw-semibold">Gernal</p>
                                         <div class="accordion-item material-shadow">
                                             <h2 class="accordion-header" id="manageaccount-headingOne">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#manageaccount-collapseOne" aria-expanded="false" aria-controls="manageaccount-collapseOne">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#manageaccount-collapseOne" aria-expanded="false"
+                                                    aria-controls="manageaccount-collapseOne">
                                                     Where can I get some ?
                                                 </button>
                                             </h2>
-                                            <div id="manageaccount-collapseOne" class="accordion-collapse collapse" aria-labelledby="manageaccount-headingOne" data-bs-parent="#manageaccount-accordion">
+                                            <div id="manageaccount-collapseOne" class="accordion-collapse collapse"
+                                                aria-labelledby="manageaccount-headingOne"
+                                                data-bs-parent="#manageaccount-accordion">
                                                 <div class="accordion-body">
                                                     If several languages coalesce, the grammar of the resulting language
                                                     is more simple and regular than that of the individual languages.
@@ -555,11 +1492,16 @@
                                         </div>
                                         <div class="accordion-item material-shadow">
                                             <h2 class="accordion-header" id="manageaccount-headingTwo">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#manageaccount-collapseTwo" aria-expanded="false" aria-controls="manageaccount-collapseTwo">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#manageaccount-collapseTwo" aria-expanded="false"
+                                                    aria-controls="manageaccount-collapseTwo">
                                                     Where does it come from ?
                                                 </button>
                                             </h2>
-                                            <div id="manageaccount-collapseTwo" class="accordion-collapse collapse" aria-labelledby="manageaccount-headingTwo" data-bs-parent="#manageaccount-accordion">
+                                            <div id="manageaccount-collapseTwo" class="accordion-collapse collapse"
+                                                aria-labelledby="manageaccount-headingTwo"
+                                                data-bs-parent="#manageaccount-accordion">
                                                 <div class="accordion-body">
                                                     The new common language will be more simple and regular than the
                                                     existing European languages. It will be as simple as Occidental; in
@@ -572,11 +1514,16 @@
                                         <p class="fs-6 text-success fw-semibold my-4">Home buyers and home sellers</p>
                                         <div class="accordion-item material-shadow">
                                             <h2 class="accordion-header" id="manageaccount-headingThree">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#manageaccount-collapseThree" aria-expanded="false" aria-controls="manageaccount-collapseThree">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#manageaccount-collapseThree" aria-expanded="false"
+                                                    aria-controls="manageaccount-collapseThree">
                                                     Why do we use it ?
                                                 </button>
                                             </h2>
-                                            <div id="manageaccount-collapseThree" class="accordion-collapse collapse" aria-labelledby="manageaccount-headingThree" data-bs-parent="#manageaccount-accordion">
+                                            <div id="manageaccount-collapseThree" class="accordion-collapse collapse"
+                                                aria-labelledby="manageaccount-headingThree"
+                                                data-bs-parent="#manageaccount-accordion">
                                                 <div class="accordion-body">
                                                     he wise man therefore always holds in these matters to this
                                                     principle of selection: he rejects pleasures to secure other greater
@@ -611,12 +1558,18 @@
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                             <p>
-                                Scarborough Homes for Sale Etobicoke Homes for Sale North York Homes for Sale Forest Hill Homes for Sale East York Homes for Sale Leaside Homes for Sale High Park Homes for Sale Niagara Homes for Sale Leslieville Homes for Sale Rosedale Homes for Sale Don Mills Homes for Sale
+                                Scarborough Homes for Sale Etobicoke Homes for Sale North York Homes for Sale Forest
+                                Hill Homes for Sale East York Homes for Sale Leaside Homes for Sale High Park Homes for
+                                Sale Niagara Homes for Sale Leslieville Homes for Sale Rosedale Homes for Sale Don Mills
+                                Homes for Sale
                             </p>
                         </div>
                         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                             <p>
-                                Highland Creek Homes for Sale Rexdale Homes for Sale The Beach Homes for Sale Mimico Homes for Sale Bathurst Manor Homes for Sale Guildwood Homes for Sale Malvern Homes for Sale Bridle Path Homes for Sale Bloor West Village Homes for Sale Roncesvalles Homes for Sale
+                                Highland Creek Homes for Sale Rexdale Homes for Sale The Beach Homes for Sale Mimico
+                                Homes for Sale Bathurst Manor Homes for Sale Guildwood Homes for Sale Malvern Homes for
+                                Sale Bridle Path Homes for Sale Bloor West Village Homes for Sale Roncesvalles Homes for
+                                Sale
                             </p>
                         </div>
                     </div>
@@ -734,23 +1687,24 @@
         </button>
         <!--end back-to-top-->
 
-        </div>
-        <!-- end layout wrapper -->
+    </div>
+    <!-- end layout wrapper -->
 
 
-        <!-- JAVASCRIPT -->
-        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/libs/simplebar/simplebar.min.js"></script>
-        <script src="assets/libs/node-waves/waves.min.js"></script>
-        <script src="assets/libs/feather-icons/feather.min.js"></script>
-        <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
-        <script src="assets/js/plugins.js"></script>
+    <!-- JAVASCRIPT -->
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+    <script src="assets/libs/feather-icons/feather.min.js"></script>
+    <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <script src="assets/js/plugins.js"></script>
 
-        <!--Swiper slider js-->
-        <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
-
-        <!--job landing init -->
-        <script src="assets/js/pages/job-lading.init.js"></script>
-    </body>
+    <!--Swiper slider js-->
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/libs/chart.js/chart.umd.js"></script>
+    <script src="assets/js/pages/chartjs.init.js"></script>
+    <!--job landing init -->
+    <script src="assets/js/pages/job-lading.init.js"></script>
+</body>
 
 </html>
