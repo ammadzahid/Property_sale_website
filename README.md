@@ -1,14 +1,108 @@
-# Velzon #
+# 🏡 Property Sale Website
 
-Velzon Theme by Themesbrand.
+A modern and responsive **Real Estate Listing Website** designed to help users browse and explore properties for sale.  
+Built using **HTML, SCSS, and JavaScript**, this project focuses on clean UI design, smooth interactivity, and easy customization.
 
-### Getting Started ###
+---
 
-The steps to compile and get started with development are covered in detail in the documentation mentioned above, but the summary is:
+## 🚀 Live Demo
+🔗 [View Demo](https://property-sale-website-vf7p.vercel.app/detail_list.html)  
+*(Update the link if hosted elsewhere like Vercel or Netlify)*
 
-- yarn install
-- gulp
+---
 
-### Support ###
+## 🧩 Features
 
-Themesbrand is happy to provide support for issues. Shoot us an email at support@Themesbrand.com and we'll get you squared away.
+✅ Responsive design for mobile, tablet, and desktop  
+✅ Interactive property listings with images & details  
+✅ Search and filter options (if implemented)  
+✅ Contact / Inquiry form  
+✅ Modern and minimal UI  
+✅ Built using modular SCSS and clean JavaScript
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Description |
+|-------------|--------------|
+| **HTML5** | Semantic markup for structured content |
+| **SCSS (Sass)** | For styling with variables & nested rules |
+| **JavaScript (ES6)** | Adds interactivity and dynamic behavior |
+| **Gulp.js** | Automates SCSS compilation and live reloading |
+| **Node.js / npm** | For managing dependencies |
+
+---
+
+## 📁 Folder Structure
+
+```bash
+Property_sale_website/
+│
+├── dist/                         # Production build files (compiled & optimized)
+│   ├── css/                      # Compiled CSS files
+│   ├── js/                       # Minified JavaScript files
+│   ├── images/                   # Optimized images for production
+│   └── index.html                # Final HTML file
+│
+├── src/                          # Source files used for development
+│   ├── scss/                     # SCSS (Sass) stylesheets
+│   │   ├── _variables.scss       # Color palette and reusable variables
+│   │   ├── _mixins.scss          # Reusable mixins
+│   │   ├── _layout.scss          # Layout styles
+│   │   ├── _components.scss      # Buttons, cards, modals, etc.
+│   │   └── style.scss            # Main stylesheet (imports all SCSS files)
+│   │
+│   ├── js/                       # JavaScript source files
+│   │   ├── main.js               # Main JS file controlling interactivity
+│   │   └── utils.js              # Helper functions (if used)
+│   │
+│   ├── html/                     # HTML templates or partials
+│   │   ├── index.html            # Home page
+│   │   ├── property.html         # Property details page
+│   │   └── contact.html          # Contact page
+│   │
+│   └── images/                   # Uncompressed images used in development
+│
+├── gulpfile.js                   # Gulp configuration file for task automation
+├── package.json                  # Node.js dependencies and project info
+├── package-lock.json             # Auto-generated dependency lock file
+└── README.md                     # Project documentation
+
+```
+---
+
+### 🧠 Explanation:
+- Outer ```markdown``` block tells GitHub it’s Markdown text.  
+- Inner ```bash``` block keeps your folder tree properly formatted (monospaced, aligned).  
+- This way, the `#` symbols **won’t break formatting** and everything stays perfectly aligned.  
+
+Chaaho to mai ye section tumhari poori README file me directly merge kar du (final cleaned version ready to upload)?
+
+
+---
+
+## ⚙️ Installation & Setup
+
+Follow these steps to run the project locally:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/ammadzahid/Property_sale_website.git
+
+# 2. Move into the project folder
+cd Property_sale_website
+
+
+---
+
+Would you like me to:
+1. 📁 **Create a ready `.md` file** for direct upload to your repository?  
+2. 📸 Or **add real screenshots** from your local folder (you can upload them here and I’ll link them properly)?
+
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the development server or build the project
+gulp
