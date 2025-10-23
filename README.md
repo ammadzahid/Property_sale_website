@@ -81,28 +81,3 @@ Chaaho to mai ye section tumhari poori README file me directly merge kar du (fin
 
 
 ---
-
-## ⚙️ Installation & Setup
-
-Follow these steps to run the project locally:
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/ammadzahid/Property_sale_website.git
-
-# 2. Move into the project folder
-cd Property_sale_website
-
-
----
-
-Would you like me to:
-1. 📁 **Create a ready `.md` file** for direct upload to your repository?  
-2. 📸 Or **add real screenshots** from your local folder (you can upload them here and I’ll link them properly)?
-
-
-# 3. Install dependencies
-npm install
-
-# 4. Start the development server or build the project
-gulp
