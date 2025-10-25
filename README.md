@@ -6,8 +6,7 @@ Built using **HTML, SCSS, and JavaScript**, this project focuses on clean UI des
 ---
 
 ## 🚀 Live Demo
-🔗 [View Demo](https://property-sale-website-vf7p.vercel.app/detail_list.html)  
-*(They Are Vercel Link For Live Demo)*
+[![Vercel](https://img.shields.io/badge/Vercel-Live%20Demo-black?style=for-the-badge&logo=vercel)](https://grocifywebapp.vercel.app/)
 
 ---
 
